@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  pool: 5
+  database: olx_spy_dev
+  host: localhost
+  user: <%= ENV["PG_USERNAME"] %>
+  password: <%= ENV["PG_PASSWORD"] %>
+
+production:
+  adapter: postgresql
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || 5 %>
+  prepared_statements: false
+

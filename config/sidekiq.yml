@@ -1,0 +1,8 @@
+:concurrency: 10
+:timeout: 25
+:queues:
+  - default
+:enabled: true
+:schedule:
+  LoadNewOffersJob:
+    cron: '*/10 * * * * *'
