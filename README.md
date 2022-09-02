@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Set bot token in config
 
-Things you may want to cover:
+```
+telegram:
+    bot: bot_token_from_bot_father
+```
 
-* Ruby version
+Use ngrok to get the public url, set it in application.rb
 
-* System dependencies
+run `rake telegram:bot:set_webhook`
 
-* Configuration
+run rails server and sidekiq
 
-* Database creation
+use `/link some_url` command in telegram to add a link for monitoring
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+link can be something like [this](https://www.olx.pl/d/nieruchomosci/mieszkania/wynajem/warszawa/?search%5Bdistrict_id%5D=353&search%5Border%5D=created_at:desc&search%5Bfilter_float_price:to%5D=3000&search%5Bfilter_float_m:from%5D=30&search%5Bfilter_enum_rooms%5D%5B0%5D=one&search%5Bfilter_enum_rooms%5D%5B1%5D=two)
